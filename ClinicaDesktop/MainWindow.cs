@@ -27,5 +27,22 @@ namespace ClinicaDesktop {
             ListPatients list = new ListPatients(this);
             list.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            string textBoxValue = searchBox.Text;
+            Patient patient = PatientsList.Find(p => p.CompleteName == textBoxValue);
+            if (patient == null) MessageBox.Show("Paciente não encontrado!!!");
+            else {
+                Register register = new Register(this, patient);
+                register.Show();
+            }
+            
+        }
+
+
+        private void searchBox_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter) button1_Click(sender, e);
+
+        }
     }
 }

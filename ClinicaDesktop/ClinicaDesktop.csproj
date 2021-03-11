@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Evolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Evolution.Designer.cs">
+      <DependentUpon>Evolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvolutionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EvolutionList.Designer.cs">
+      <DependentUpon>EvolutionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EvolutionRegister.cs" />
     <Compile Include="ListPatients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +81,12 @@
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
     <Compile Include="Serialization.cs" />
+    <EmbeddedResource Include="Evolution.resx">
+      <DependentUpon>Evolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EvolutionList.resx">
+      <DependentUpon>EvolutionList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListPatients.resx">
       <DependentUpon>ListPatients.cs</DependentUpon>
     </EmbeddedResource>

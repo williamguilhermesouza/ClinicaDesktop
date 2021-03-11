@@ -1,35 +1,38 @@
-﻿namespace ClinicaDesktop {
+﻿using System.Collections.Generic;
+
+namespace ClinicaDesktop {
     public class Patient {
-        private string CompleteName;
-        private string Sex;
-        private string CivilEstate;
-        private string Email;
-        private string Address;
-        private string BirthDate;
-        private string Profession;
-        private string PhoneNumber;
-        private string Weight;
-        private string Height;
-        private string Complain;
-        private string CurrentDisease;
-        private string PreexistentDisease;
-        private string AssociateDisease;
-        private string History;
-        private string Habits;
-        private string Medication;
-        private string State;
-        private string Pa;
-        private string Fc;
-        private string Fr;
-        private string Sp;
-        private string Observation;
+        public string CompleteName { get; set; }
+        public string Sex { get; set; }
+        public string CivilEstate { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public string BirthDate { get; set; }
+        public string Profession { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Weight { get; set; }
+        public string Height { get; set; }
+        public string Complain { get; set; }
+        public string CurrentDisease { get; set; }
+        public string PreexistentDisease { get; set; }
+        public string AssociateDisease { get; set; }
+        public string History { get; set; }
+        public string Habits { get; set; }
+        public string Medication { get; set; }
+        public string State { get; set; }
+        public string Pa { get; set; }
+        public string Fc { get; set; }
+        public string Fr { get; set; }
+        public string Sp { get; set; }
+        public string Observation { get; set; }
+        public List<EvolutionRegister> Evolutions { get; set; }
 
         public Patient() { }
 
         public Patient(string completeName, string sex, string civilState, string email, string address, string birthDate,
             string profession, string phoneNumber, string weight, string height, string complain, string currentDisease,
             string preexistentDisease, string associateDisease, string history, string habits, string medication, string state,
-            string pa, string fc, string fr, string sp, string observation) {
+            string pa, string fc, string fr, string sp, string observation, List<EvolutionRegister> evolutions) {
             CompleteName = completeName;
             Sex = sex;
             CivilEstate = civilState;
@@ -53,11 +56,9 @@
             Fr = fr;
             Sp = sp;
             Observation = observation;
+            Evolutions = evolutions;
         }
 
-        public string getName() {
-            return CompleteName;
-        }
 
     }
 }
