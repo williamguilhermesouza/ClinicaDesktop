@@ -15,6 +15,9 @@ namespace ClinicaDesktop {
             PatientsList = Serialization.TryReadFromXmlFile<List<Patient>>("Patients.xml");
             if (PatientsList == null) PatientsList = new List<Patient>();
             InitializeComponent();
+            List<string> listaNome = PatientsList.Select(x => x.CompleteName).ToList();
+            searchBox.DataSource = listaNome;
+
         }
 
 

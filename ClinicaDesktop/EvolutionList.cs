@@ -27,10 +27,15 @@ namespace ClinicaDesktop {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            string selected = evolutions.SelectedItem.ToString();
-            EvolutionRegister register = this.Paciente.Evolutions.Find(x => x.Date.ToString() == selected);
-            Evolution evolution = new Evolution(MainForm, this.Paciente, this, register);
-            evolution.Show();
+            try {
+                string selected = evolutions.SelectedItem.ToString();
+                EvolutionRegister register = this.Paciente.Evolutions.Find(x => x.Date.ToString() == selected);
+                Evolution evolution = new Evolution(MainForm, this.Paciente, this, register);
+                evolution.Show();
+            } catch {
+                MessageBox.Show("Selecione uma evolução");
+            }
+            
         }
     }
 }

@@ -67,6 +67,8 @@ namespace ClinicaDesktop {
             this.Controls.Add(this.open);
             this.Controls.Add(this.evolutions);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(494, 378);
+            this.MinimumSize = new System.Drawing.Size(494, 378);
             this.Name = "EvolutionList";
             this.Text = "EvolutionList";
             this.ResumeLayout(false);
